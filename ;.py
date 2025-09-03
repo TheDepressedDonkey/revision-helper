@@ -15,7 +15,8 @@ from spacy.cli import download
 try:
     nlp = spacy.load("en_core_web_sm")
 except OSError:
-    download("en_core_web_sm")
+    with st.spinner("Downloading spaCy model..."):
+        download("en_core_web_sm")
     nlp = spacy.load("en_core_web_sm")
     
 p = inflect.engine()
@@ -688,4 +689,5 @@ elif st.session_state.page=="progress":
 elif st.session_state.page=="settings":
     with main_container.container():
         settings()
+
 
