@@ -10,9 +10,14 @@ import inflect
 import os
 from mutagen import File
 import wave
+from spacy.cli import download
 
-
-nlp = spacy.load("en_core_web_sm")
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+    
 p = inflect.engine()
 
 
@@ -683,3 +688,4 @@ elif st.session_state.page=="progress":
 elif st.session_state.page=="settings":
     with main_container.container():
         settings()
+
