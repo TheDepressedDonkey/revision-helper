@@ -1,0 +1,6 @@
+streamlit
+python-docx
+Pillow
+spacy
+inflect
+mutagen

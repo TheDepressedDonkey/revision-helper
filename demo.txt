@@ -1,0 +1,37 @@
+object orientation is about creating and manipulating objects
+an object is a run time program entity that has a state, behaviour, and identity
+objects communicate via messages
+a class defines a group of objects with similar properties and behaviours
+public classes permit access from beyond the enclosing package
+private classes prevent access from outside the parent class
+protected classes prevent access from outside parent classes and sub classes
+unmodified variables cannot be accessed from outside the package even if its in a public class
+a static variable is known as a class variable
+a non static variable is known as an instance variable
+downcasting tells the compiler when a variable refers to a subclass object
+abstract classes are a type of superclass that is designed to contain only the common features of their subclasses to reduce complexity
+an object of an abstract class cannot be created, they can only be inherited from
+new classes inherit from existing classes using "extends"
+objects can be moved into new variables if the new variable is either the same type or from a superclass of the variable
+composition is where objects of one class are made up of objects from other classes
+static binding is where multiple methods with the same name can be created within a class as long as they have different input types
+superclass methods can be redefined or added to, this is done by using "super" 
+dynamic binding is where the decision of which method to use is made at run-time
+an interface is an extreme example of an abstract class where all its methods are also abstract
+an interface cannot have a constructor or be static, and uses "implements" instead of "extends"
+interfaces specify the method to be used in a package but implemented in different ways in others
+classes that implement ActionListner are written by the programmer but its used by classes in the java.awt.event package
+an inner class is where a class is defined within another class
+inner classes can access private variables in its enclosing class
+inner classes are often used for event-handlers
+unless the inner class is static, objects of the inner class must belong to the outer class
+any java app with a GUI must use JFrame
+layout managers determine how the app looks
+components being placed on the app must be added to its content pane where their positions are set by a layout manager
+borderlayout uses north, east, south, west, and center
+in the boxlayout, components go down in a single column
+in the flowlayout, components go right in a single row
+in a gridlayout, components are sorted into rows and columns
+procedural programming is where the code can run and end without having to wait on any events to occur
+event-driven programming is where the program stops until an event occurs which it then reacts to
+classes implementing ActionListener need a public void method called actionPerformed that takes an argument of type ActionEvent
